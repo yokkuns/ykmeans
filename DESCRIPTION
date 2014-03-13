@@ -1,0 +1,10 @@
+Package: ykmeans
+Type: Package
+Title: utility of k-means
+Version: 1.0
+Date: 2014-03-14
+Author: Yohei sato
+Maintainer: Yohei Sato <yohei0511@gmail.com>
+Description: Automatic determination of the number of clusters of k-means.
+License: GPL
+Depends: plyr,foreach,dplyr
