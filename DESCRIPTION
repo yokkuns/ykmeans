@@ -7,4 +7,4 @@ Author: Yohei sato
 Maintainer: Yohei Sato <yohei0511@gmail.com>
 Description: Automatic determination of the number of clusters of k-means.
 License: GPL
-Depends: plyr,foreach,dplyr
+Depends: plyr,foreach

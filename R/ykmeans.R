@@ -17,10 +17,9 @@ kmeansN <- function(x, k, variable.names="x",objective.name="y",
     data.frame(n=i, .id=x2$.id, cluster=x2$new.cluster, y=x2[,objective.name])
   })
   
-  res <- km.base %.%
-    group_by(.id) %.%
-    summarise(cluster=as.numeric(names(sort(table(cluster), decreasing = T)[1]))) %.%
-    arrange(.id)
+  res <- ddply(km.base, .(.id), summarize,
+               cluster=as.numeric(names(sort(table(cluster), decreasing = T)[1])))
+  
   names(res)[2] <- cluster.name
   x <- merge(x, res, by=".id")
   x[,!(names(x) %in% ".id")]
