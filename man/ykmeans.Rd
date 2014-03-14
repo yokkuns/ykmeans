@@ -2,13 +2,14 @@
 \alias{ykmeans}
 
 \title{
-ykmeans
+K-means using a target variable
 }
 \description{
-In k-means, a package that automatic determination of the number of clusters using intra-cluster variance
+The clustering by k-means of using the target variable.
 }
 \usage{
-ykmeans(x, variable.names = "x", objective.name = "y", k.list = 3:6, cluster.name = "cluster", n = 100)
+ykmeans(x, variable.names = "x",target.name = "y",
+              k.list = 3:6,cluster.name = "cluster", n = 100)
 }
 
 \arguments{
@@ -18,7 +19,7 @@ A data.frame
   \item{variable.names}{
 variable names
 }
-  \item{objective.name}{
+  \item{target.name}{
 objective variable name
 }
   \item{k.list}{
@@ -41,8 +42,10 @@ Yohei Sato
 }
 
 \examples{
+\dontrun{
 data(actData)
 act.ykm <- ykmeans(actData, paste0("x",1:17),"y",3:6)
 table(act.ykm$cluster)
+}
 }
 

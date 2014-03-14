@@ -2,10 +2,10 @@
 \alias{actData}
 \docType{data}
 \title{
-Action Data
+Sample Action Data
 }
 \description{
-Action Data
+Sample Action Data. x1 ~ x17 is the explanatory variable, y is the target variable.
 }
 
 \usage{data(actData)}
@@ -32,9 +32,7 @@ Action Data
     \item{\code{x17}}{a numeric vector}
   }
 }
-\details{
-x1 ~ x17 is the explanatory variable, y is the target variable
-}
+
 
 \examples{
 data(actData)

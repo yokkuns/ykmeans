@@ -9,7 +9,8 @@ kmeansN2
 run N times the number of clusters in kmeans of multiple
 }
 \usage{
-kmeansN2(x, variable.names = "x", objective.name = "y", k.list = 3:6, cluster.name = "cluster", n = 100)
+kmeansN2(x, variable.names = "x", target.name = "y",
+         k.list = 3:6, cluster.name = "cluster", n = 100)
 }
 
 \arguments{
@@ -19,7 +20,7 @@ A data.frame
   \item{variable.names}{
 variable names
 }
-  \item{objective.name}{
+  \item{target.name}{
 objective names
 }
   \item{k.list}{
@@ -42,8 +43,10 @@ Yohei Sato
 }
 
 \examples{
+\dontrun{
 data(actData)
 act.kmn2 <- kmeansN2(actData, paste0("x",1:17),"y", 3:6)
 head(act.kmn2)
+}
 }
 

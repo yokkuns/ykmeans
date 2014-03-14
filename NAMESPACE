@@ -1,1 +1,5 @@
-exportPattern("^[[:alpha:]]+")
+export(ykmeans)
+export(kmeansN)
+export(kmeansN2)
+import(plyr)
+import(foreach)

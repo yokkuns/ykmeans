@@ -2,10 +2,10 @@
 \alias{ykmeans-package}
 \docType{package}
 \title{
-utility of k-means
+K-means using a target variable
 }
 \description{
-In k-means, a package that automatic determination of the number of clusters using intra-cluster variance
+The clustering by k-means of using the target variable.
 }
 \details{
 \tabular{ll}{
@@ -22,7 +22,9 @@ Yohei Sato
 }
 
 \examples{
+\dontrun{
 data(actData)
 act.ykm <- ykmeans(actData, paste0("x",1:17),"y",3:6)
 table(act.ykm$cluster)
+}
 }

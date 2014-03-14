@@ -8,7 +8,8 @@ kmeansN
 N times run the k-means
 }
 \usage{
-kmeansN(x, k, variable.names = "x", objective.name = "y", cluster.name = "cluster", n = 100)
+kmeansN(x, k, variable.names = "x", target.name = "y", 
+        cluster.name = "cluster", n = 100)
 }
 
 \arguments{
@@ -21,7 +22,7 @@ number of cluster
   \item{variable.names}{
 variable names
 }
-  \item{objective.name}{
+  \item{target.name}{
 objective variable name
 }
 
@@ -42,8 +43,10 @@ Yohei Sato
 }
 
 \examples{
+\dontrun{
 data(actData)
 act.kmn <- kmeansN(actData, 3, paste0("x",1:17),"y")
 table(act.kmn$cluster)
+}
 }
 
